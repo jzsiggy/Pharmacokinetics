@@ -38,10 +38,10 @@ def primeira_iteração():
 
 def EqDif2(ListaSolucao, t):
    
-    kv= 1
-    kd = math.log(2)/0.0833 #5 minutos em horas
-    km= 1
-    ke= 1
+    kv= 0.05
+    kd = math.log(2)/0.0833 #5 minutos em horas (8.321094604561168)
+    km= 0.0
+    ke = kd
     
     S=ListaSolucao[0]
     T=ListaSolucao[1]
@@ -70,6 +70,7 @@ def segunda_iteração():
     # print(Solucao)
     plt.plot(l_tempo, Solucao[:, 0])
     plt.plot(l_tempo, Solucao[:, 1])
+    # plt.set_yscale("log", nonposy='clip')
     plt.show()
     
 segunda_iteração()
